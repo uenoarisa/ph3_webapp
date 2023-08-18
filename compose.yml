@@ -42,14 +42,14 @@ services:
       - MYSQL_PASSWORD=password
       - TZ=Asia/Tokyo
 # 使いたい人はコメントアウトを解除してください
-# phpmyadmin:
-#   image: phpmyadmin/phpmyadmin
-#   environment:
-#     - PMA_ARBITRARY=0
-#     - PMA_HOSTS=mysql
-#     - PMA_USER=posse
-#     - PMA_PASSWORD=password
-#   links:
-#     - mysql
-#   ports:
-#     - 1234:80
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    environment:
+      - PMA_ARBITRARY=0
+      - PMA_HOSTS=mysql
+      - PMA_USER=posse
+      - PMA_PASSWORD=password
+    links:
+      - mysql
+    ports:
+      - 1234:80
